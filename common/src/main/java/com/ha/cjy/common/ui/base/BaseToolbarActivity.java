@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.ha.cjy.common.R;
 import com.ha.cjy.common.util.ToolbarUtil;
 
 /**
@@ -65,7 +66,9 @@ public abstract class BaseToolbarActivity extends BaseActivity {
      * 获取toolbar的布局view
      * @return
      */
-    protected abstract int getToolbarLayout();
+    protected int getToolbarLayout(){
+        return R.layout.default_toolbar_layout;
+    }
 
     /**
      * 自定义Toolbar

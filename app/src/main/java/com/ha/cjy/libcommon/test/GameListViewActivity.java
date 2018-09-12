@@ -58,9 +58,4 @@ public class GameListViewActivity extends BaseToolbarActivity {
     protected void initToolbar() {
         ToolbarFactory.initLeftBackToolbar(GameListViewActivity.this,"","游戏列表");
     }
-
-    @Override
-    protected int getToolbarLayout() {
-        return R.layout.default_toolbar_layout;
-    }
 }

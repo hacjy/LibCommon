@@ -37,6 +37,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener  
     private Button mBtnDownload;
     private Button mBtnOpenExpandableList;
     private Button mBtnSelectPhoto;
+    private Button mBtnFastListView;
     private Button mBtnEditListView;
     private TextView mTvText;
     private RadioGroup mRgSelect;
@@ -73,6 +74,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener  
         mRgSelect = findViewById(R.id.rg_select);
         mBtnSelectPhoto = findViewById(R.id.btn_select_photo);
         mBtnEditListView = findViewById(R.id.btn_edit_listview);
+        mBtnFastListView = findViewById(R.id.btn_fast_listview);
 
         Util.setRoundRectShape(mBtnLoadFailedView,20);
     }
@@ -97,6 +99,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener  
         mBtnOpenExpandableList.setOnClickListener(this);
         mBtnSelectPhoto.setOnClickListener(this);
         mBtnEditListView.setOnClickListener(this);
+        mBtnFastListView.setOnClickListener(this);
 
         mRgSelect.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -153,7 +156,10 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener  
         } else if (i == R.id.btn_edit_listview) {
             Intent intent = new Intent(getActivity(), GameEditListViewActivity.class);
             startActivity(intent);
-        }
+        }  else if (i == R.id.btn_fast_listview) {
+            Intent intent = new Intent(getActivity(), FastListViewActivity.class);
+            startActivity(intent);
+         }
     }
 
     private void testUpdate(){
