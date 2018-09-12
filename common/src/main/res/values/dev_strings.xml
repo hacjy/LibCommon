@@ -1,0 +1,31 @@
+<resources>
+    <string name="login_failed">登录失败</string>
+    <string name="package_type">main</string>
+    <string name="text_live_no_new">暂无消息</string>
+    <string name="index_hot_list_empty_hint">暂无数据</string>
+    <string name="outline">网络不给力，请点击重试</string>
+    <string name="retry">点击重试</string>
+    <string name="no_upload">Ta还没有上传照片噢!</string>
+    <string name="load_failed_default_text">网络出问题啦，点击屏幕刷新</string>
+    <string name="update_version_empty_url">还没获取到下载地址</string>
+    <string name="update_version_download_status_waiting">等待中</string>
+    <string name="update_version_download_status_install">立即安装</string>
+    <string name="update_version_download_status_retry">重试</string>
+    <string name="update_version_download_status_connecting">连接中</string>
+    <string name="update_version_title">发现新版本-%1$s</string>
+    <string name="update_version_progress_title">正在更新 %1$d%%</string>
+    <string name="update_version_failed">更新失败</string>
+
+    <string name="download_start">开始下载</string>
+    <string name="download_wait">等待</string>
+    <string name="download_complete">下载完成</string>
+    <string name="download_pausing">暂停中</string>
+    <string name="download_pause">暂停</string>
+    <string name="download_canceling">取消中</string>
+    <string name="download_failure">下载失败</string>
+    <string name="download_unknown">未知</string>
+    <string name="download_connecting">连接中</string>
+    <string name="wifi_no_open_remind_down">您当前使用的是移动网络\r\n是否继续下载？</string>
+    <string name="yes">继续</string>
+    <string name="no">取消</string>
+</resources>

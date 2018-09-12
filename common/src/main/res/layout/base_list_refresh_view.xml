@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 默认列表的布局 -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.ha.cjy.common.ui.widget.list.DefaultSwipeRefreshLayout
+        android:id="@+id/swrf_ly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.ha.cjy.common.ui.widget.list.LoadRecyclerView
+            android:id="@+id/recycler_view_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
+    </com.ha.cjy.common.ui.widget.list.DefaultSwipeRefreshLayout>
+
+</merge>

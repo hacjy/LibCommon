@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp">
+
+    <!-- 红点 -->
+    <ImageView
+        android:id="@+id/iv_redpoint"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        android:layout_toRightOf="@+id/iv_main_tab_item_icon"
+        android:layout_alignTop="@+id/iv_main_tab_item_icon"
+        android:layout_marginLeft="-2dp"
+        android:visibility="gone"></ImageView>
+
+    <ImageView
+        android:id="@+id/iv_main_tab_item_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="3dp"
+        android:layout_centerHorizontal="true"
+        android:clickable="false"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/tv_main_tab_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/iv_main_tab_item_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@android:color/transparent"
+        android:clickable="false"
+        android:gravity="center"
+        android:text="赛事"
+        android:textColor="@drawable/bottom_tablayout_textcolor"
+        android:textSize="14sp" />
+
+</RelativeLayout>

@@ -1,0 +1,184 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- wh parent -->
+    <style name="whauto">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="hauto">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="wauto">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="whmatch">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- 加载对话框的样式  -->
+    <style name="style_loading_dialog" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--是否在悬浮Activity之上  -->
+        <item name="android:windowIsFloating">true</item>
+        <!--标题  -->
+        <item name="android:windowNoTitle">true</item>
+        <!--阴影  -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 模糊背景 -->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!-- viewpager tab样式 -->
+    <style name="style_viewpager_tab">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@drawable/txt_viewpager_tab_textcolor</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/txt_viewpager_tab_background</item>
+    </style>
+
+    <!-- Activity 没有标题栏的样式 -->
+    <style name="style_no_title_theme" parent="AppTheme">
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- 欢迎页的主题样式 -->
+    <style name="style_welcome_theme" parent="style_no_title_theme">
+        <item name="android:windowBackground">@drawable/welcome_bg</item>
+    </style>
+
+    <!-- 更新视图的样式 -->
+    <style name="float_update_version_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">132dp</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="float_update_version_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/ico_float_text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingLeft">13dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="MyDialog" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--是否在悬浮Activity之上  -->
+        <item name="android:windowIsFloating">true</item>
+        <!--标题  -->
+        <item name="android:windowNoTitle">true</item>
+        <!--阴影  -->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <!-- &lt;!&ndash; 进入和退出的动画 &ndash;&gt;-->
+        <item name="android:windowAnimationStyle">@style/dialog_animation</item>
+
+        <!-- 点外边可以消失  -->
+        <item name="android:windowCloseOnTouchOutside">true</item>
+
+    </style>
+
+    <!--控制dialog进出动画-->
+    <style name="dialog_animation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_in</item>
+        <!-- 进入时的动画 -->
+        <item name="android:windowExitAnimation">@anim/dialog_out</item>
+        <!-- 退出时的动画 -->
+    </style>
+
+    <style name="float_close">
+        <item name="android:layout_width">22dp</item>
+        <item name="android:layout_height">22dp</item>
+        <item name="android:background">@drawable/ico_close_float</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_margin">3dp</item>
+    </style>
+
+    <style name="float_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#fa326e</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">100dp</item>
+    </style>
+
+    <style name="float_retry">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+    </style>
+
+    <style name="float_SeekBar" parent="@android:style/Widget.SeekBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:maxHeight">6dp</item>
+        <item name="android:progressDrawable">@drawable/upgrade_seekbar_draw</item>
+        <item name="android:minHeight">6dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="float_btn">
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:background">@drawable/btn_upgrade</item>
+        <item name="android:textColor">@drawable/color_upgrade</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+    <!-- end 更新视图的样式 -->
+
+    <!-- 选择拍照或者相册的对话框样式 -->
+    <!-- 选择拍照或者相册从下滑出的 popupwindow 的动画 -->
+    <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_bottom_out</item>
+    </style>
+    <style name="pop_bottom" parent="hauto">
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">#cc000000</item>
+    </style>
+    <style name="pop_bottom_item">
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:layout_marginBottom">0.3dp</item>
+    </style>
+    <style name="pop_bottom_item_imp" parent="pop_bottom_item">
+        <item name="android:textColor">#666666</item>
+    </style>
+    <!-- end -->
+</resources>

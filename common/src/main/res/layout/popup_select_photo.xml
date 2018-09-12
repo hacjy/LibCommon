@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pop_layout"
+    style="@style/whmatch"
+    android:background="#66000000"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/pop_bottom"
+        android:background="#dddddd">
+
+        <TextView
+            android:id="@+id/btn_take_photo"
+            style="@style/pop_bottom_item"
+            android:text="拍照" />
+
+        <TextView
+            android:id="@+id/btn_pick_photo"
+            style="@style/pop_bottom_item"
+            android:text="从手机相册选取" />
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            style="@style/pop_bottom_item_imp"
+            android:text="取消" />
+    </LinearLayout>
+
+</RelativeLayout>

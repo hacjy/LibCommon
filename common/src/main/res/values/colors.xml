@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#121626</color>
+    <color name="colorPrimaryDark">#121626</color>
+    <color name="colorAccent">#121626</color>
+
+    <!-- 除成功外的状态视图背景色 -->
+    <color name="load_state_view_background">#FFFFFF</color>
+    <!-- 除成功外的状态视图文本颜色 -->
+    <color name="load_state_view_no_success_text_color">#666666</color>
+    <!-- 加载视图文本颜色 -->
+    <color name="load_start_view_text_color">#ffffff</color>
+
+    <!-- viewpager 页面背景色-->
+    <color name="viewpager_background_color">#ececec</color>
+    <!-- viewpager tab选中背景色-->
+    <color name="viewpager_tab_selected_background_color">#ffc926</color>
+    <!-- viewpager tab未选中背景色-->
+    <color name="viewpager_tab_normal_background_color">#121626</color>
+    <!-- viewpager tab下划线-->
+    <color name="viewpager_tab_line_color">#3F51B5</color>
+    <!-- viewpager tabw 文本未选中颜色-->
+    <color name="viewpager_tab_text_normalcolor">#667296</color>
+    <!-- viewpager tab 文本选中颜色-->
+    <color name="viewpager_tab_text_selectedcolor">#ffc926</color>
+
+    <!-- 底部tab的背景颜色-->
+    <color name="bottom_tablayout_background">#ffffff</color>
+    <!-- 底部tab的指示器颜色 -->
+    <color name="bottom_tablayout_tabIndicator_color">#ffffff</color>
+    <!-- 底部tab line的背景颜色-->
+    <color name="bottom_tablayout_line_background">#ececec</color>
+    <!-- 底部tab的文本选中颜色-->
+    <color name="bottom_tablayout_text_selected_color">#ffc926</color>
+    <!-- 底部tab的文本未选中颜色-->
+    <color name="bottom_tablayout_text_normal_color">#667296</color>
+    <!-- 扫描二维码边框圆角颜色-->
+    <color name="scan_corner_color">#ffc926</color>
+
+    <color name="titlebar_background">#121626</color>
+    <color name="titlebar_left_textcolor">#ffc926</color>
+    <color name="titlebar_right_textcolor">#ffc926</color>
+    <color name="white">#ffffff</color>
+</resources>

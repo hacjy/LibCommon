@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/float_update_version_view">
+
+    <TextView
+        android:id="@+id/contentItemText"
+        style="@style/float_update_version_text"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/ico_float_text"
+        android:drawableStart="@drawable/ico_float_text"
+        android:drawablePadding="5dp" />
+
+</LinearLayout>

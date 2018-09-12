@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rlay_app_store_box"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333333"
+   >
+
+
+    <ImageView
+        android:id="@+id/iv_app_store_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="4dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"/>
+
+    <LinearLayout
+        android:id="@+id/llay_desktop_root_tool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/iv_app_store_icon"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_app_store_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正在下载"
+                android:layout_alignParentLeft="true"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:paddingRight="100dp"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:layout_alignRight="@+id/tv_app_store_name2"/>
+            <TextView
+                android:id="@+id/tv_app_store_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="0%"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_app_store_down"
+            style="@style/notification_download_progressbar_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">CommomLib</string>
+
+    <string name="txt_load_start_view">加载中...</string>
+    <string name="txt_load_empty_view">暂无数据</string>
+    <string name="txt_load_failed_view">网络连接错误，请检查网络设置</string>
+
+    <!-- viewpager tab的文本 -->
+    <string name="txt_viewpager_tab_left">已开始</string>
+    <string name="txt_viewpager_tab_middler">进行中</string>
+    <string name="txt_viewpager_tab_right">已结束</string>
+
+    <string name="mine_edit_photo_permission_sdcard_warn">请开启读写SD卡权限，以便应用裁剪图片</string>
+    <string name="mine_edit_photo_sdcard_not_find_warn">未找到存储卡，无法存储照片！</string>
+
+    <string name="share_qq_uninstall">您的手机可能没有安装QQ,无法分享</string>
+    <string name="share_wx_uninstall">您的手机可能没有安装微信,无法分享</string>
+    <string name="share_sina_uninstall">您的手机可能没有安装新浪微博,无法分享</string>
+</resources>

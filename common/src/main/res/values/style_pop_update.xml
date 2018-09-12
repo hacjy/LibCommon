@@ -1,0 +1,67 @@
+<resources>
+    <!-- 更新视图的样式 -->
+    <style name="pop_update">
+        <item name="android:layout_width">240dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="pop_update_top_img" parent="whauto">
+        <item name="android:src">@drawable/bg_update_top_img</item>
+    </style>
+    <style name="pop_update_content" parent="hauto">
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/bg_pop_update</item>
+    </style>
+    <style name="pop_update_text_title" parent="hauto">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+    </style>
+    <style name="pop_update_text_title_black" parent="whauto">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+    <style name="pop_update_text_title_red" parent="whauto">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#ff0000</item>
+    </style>
+    <style name="pop_update_text" parent="hauto">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#555555</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+    </style>
+
+    <style name="pop_btn_list" parent="hauto">
+        <item name="android:background">@drawable/bg_pop_btn_list_top_line</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_height">48dp</item>
+    </style>
+    <style name="pop_btn_item" parent="whmatch">
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <style name="pop_btn_item_grey" parent="pop_btn_item">
+        <item name="android:textColor">#666666</item>
+    </style>
+    <style name="pop_vertical_line" parent="wauto">
+        <item name="android:layout_width">1px</item>
+        <item name="android:background">#dddddd</item>
+    </style>
+
+    <style name="notification_download_progressbar_style" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">50dp</item>
+        <item name="android:minHeight">4dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/notification_download_progress_drawable
+        </item>
+    </style>
+</resources>
