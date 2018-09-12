@@ -196,15 +196,24 @@ public class SelectPhotoUtil {
         new PermissionsUtil().requestPermission(activity, 1, new PermissionCallback() {
             @Override
             public void grantPermission(String[] s) {
+                if (mCallBack != null){
+                    mCallBack.callPermissionResult(true);
+                }
             }
 
             @Override
             public void denyPermission(String[] s) {
                 ToastUtil.showToast(BaseApplication.getInstance(), BaseApplication.getInstance().getString(R.string.mine_edit_photo_permission_sdcard_warn));
+                if (mCallBack != null){
+                    mCallBack.callPermissionResult(false);
+                }
             }
 
             @Override
             public void denyNotRemindPermission(String[] s) {
+                if (mCallBack != null){
+                    mCallBack.callPermissionResult(false);
+                }
 //                ToastUtil.showToast(BaseApplication.getInstance(), BaseApplication.getInstance().getString(R.string.mine_edit_photo_permission_sdcard_warn));
             }
         }, Manifest.permission.CAMERA,Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE);
@@ -212,5 +221,6 @@ public class SelectPhotoUtil {
 
     public interface SelPopCallBack {
         void callBitmapData(Bitmap bitmap, String data);
+        void callPermissionResult(boolean isGranted);
     }
 }
