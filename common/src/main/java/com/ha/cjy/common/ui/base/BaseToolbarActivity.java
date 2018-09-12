@@ -45,7 +45,7 @@ public abstract class BaseToolbarActivity extends BaseActivity {
 
     @Override
     public View getContentView() {
-        return null;
+        return mToolbarUtil.getContentView();
     }
 
 

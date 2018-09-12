@@ -1,7 +1,6 @@
 package com.ha.cjy.libcommon.test;
 
 import android.os.Bundle;
-import android.view.View;
 
 import com.ha.cjy.common.ui.base.BaseToolbarActivity;
 import com.ha.cjy.common.ui.widget.list.FastRecyclerView;
@@ -20,11 +19,6 @@ public class FastListViewActivity extends BaseToolbarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fast_list_view);
-    }
-
-    @Override
-    public View getContentView() {
-        return null;
     }
 
     @Override

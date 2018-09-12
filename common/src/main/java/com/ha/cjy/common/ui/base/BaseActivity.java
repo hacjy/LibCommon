@@ -93,7 +93,9 @@ public abstract class BaseActivity extends AppCompatActivity implements IInitVie
      * 获取内容视图
      * @return
      */
-    public abstract View getContentView();
+    public View getContentView(){
+        return null;
+    }
 
     /**
      * 加载失败
