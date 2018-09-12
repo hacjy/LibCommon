@@ -75,8 +75,6 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener  
         mBtnSelectPhoto = findViewById(R.id.btn_select_photo);
         mBtnEditListView = findViewById(R.id.btn_edit_listview);
         mBtnFastListView = findViewById(R.id.btn_fast_listview);
-
-        Util.setRoundRectShape(mBtnLoadFailedView,20);
     }
 
     @Override

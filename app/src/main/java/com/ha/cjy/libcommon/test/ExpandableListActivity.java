@@ -45,6 +45,8 @@ public class ExpandableListActivity extends BaseToolbarActivity implements Expan
         //设置二级列表适配器
         sectionedExpandableLayoutHelper = new SectionedExpandableLayoutHelper(this,
                 mRecyclerView, this, mSpanCount);
+        //设置是否只显示一个Group
+//        sectionedExpandableLayoutHelper.setShowSingleGroup(true);
     }
 
 
@@ -56,7 +58,7 @@ public class ExpandableListActivity extends BaseToolbarActivity implements Expan
         arrayList.add(new Item("iPad", 1));
         arrayList.add(new Item("iPod", 2));
         arrayList.add(new Item("iMac", 3));
-        sectionedExpandableLayoutHelper.addSection("Apple Products",true, arrayList);
+        sectionedExpandableLayoutHelper.addSection(1,"Apple Products",true, arrayList);
 
         arrayList = new ArrayList<>();
         arrayList.add(new Item("LG", 0));
@@ -65,7 +67,7 @@ public class ExpandableListActivity extends BaseToolbarActivity implements Expan
         arrayList.add(new Item("Motorola", 3));
         arrayList.add(new Item("Sony", 4));
         arrayList.add(new Item("Nokia", 5));
-        sectionedExpandableLayoutHelper.addSection("Companies",false, arrayList);
+        sectionedExpandableLayoutHelper.addSection(2,"Companies",false, arrayList);
 
         arrayList = new ArrayList<>();
         arrayList.add(new Item("Chocolate", 0));
@@ -73,7 +75,7 @@ public class ExpandableListActivity extends BaseToolbarActivity implements Expan
         arrayList.add(new Item("Vanilla", 2));
         arrayList.add(new Item("Butterscotch", 3));
         arrayList.add(new Item("Grape", 4));
-        sectionedExpandableLayoutHelper.addSection("Ice cream",false, arrayList);
+        sectionedExpandableLayoutHelper.addSection(3,"Ice cream",false, arrayList);
 
 
         sectionedExpandableLayoutHelper.notifyDataSetChanged();

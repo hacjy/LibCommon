@@ -14,18 +14,27 @@ import java.util.Map;
  */
 public class SectionedExpandableLayoutHelper implements SectionStateChangeListener {
 
-    //data list
+    /**
+     * Group和Item对应的数据列表集合
+     */
     private LinkedHashMap<Section, ArrayList<Item>> mSectionDataMap = new LinkedHashMap<Section, ArrayList<Item>>();
+    /**
+     * 数据：Group与Item数据混合一起的列表
+     */
     private ArrayList<Object> mDataArrayList = new ArrayList<Object>();
-
-    //section map
+    /**
+     * Group数据集合
+     */
     private HashMap<String, Section> mSectionMap = new HashMap<String, Section>();
 
-    //adapter
+    /**
+     * 适配器
+     */
     private SectionedExpandableGridAdapter mSectionedExpandableGridAdapter;
-
-    //recycler view
-    RecyclerView mRecyclerView;
+    /**
+     * 列表
+     */
+    private RecyclerView mRecyclerView;
 
     public SectionedExpandableLayoutHelper(Context context, RecyclerView recyclerView, ExpandableListItemClickListener itemClickListener,
                                            int gridSpanCount) {
@@ -40,6 +49,14 @@ public class SectionedExpandableLayoutHelper implements SectionStateChangeListen
         mRecyclerView = recyclerView;
     }
 
+    /**
+     * 设置是否当前只展开一个Group
+     * @param isShowSingleGroup
+     */
+    public void setShowSingleGroup(boolean isShowSingleGroup){
+        mSectionedExpandableGridAdapter.setShowSingleGroup(isShowSingleGroup);
+    }
+
     public void notifyDataSetChanged() {
         generateDataList();
         mSectionedExpandableGridAdapter.notifyDataSetChanged();
@@ -48,6 +65,13 @@ public class SectionedExpandableLayoutHelper implements SectionStateChangeListen
     public void addSection(String section, ArrayList<Item> items) {
         Section newSection;
         mSectionMap.put(section, (newSection = new Section(section)));
+        mSectionDataMap.put(newSection, items);
+    }
+
+    public void addSection(int flagId,String section, boolean isExpand,ArrayList<Item> items) {
+        Section newSection = new Section(flagId,section);
+        newSection.isExpanded = isExpand;
+        mSectionMap.put(section,newSection );
         mSectionDataMap.put(newSection, items);
     }
 
@@ -74,8 +98,9 @@ public class SectionedExpandableLayoutHelper implements SectionStateChangeListen
     private void generateDataList () {
         mDataArrayList.clear();
         for (Map.Entry<Section, ArrayList<Item>> entry : mSectionDataMap.entrySet()) {
-            Section key;
-            mDataArrayList.add((key = entry.getKey()));
+            Section key = entry.getKey();
+            mDataArrayList.add(key);
+
             //是否显示子项，是通过是否添加子项数据来控制的
             if (key.isExpanded)
                 mDataArrayList.addAll(entry.getValue());

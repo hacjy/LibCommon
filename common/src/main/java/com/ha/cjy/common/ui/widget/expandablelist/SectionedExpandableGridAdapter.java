@@ -32,6 +32,10 @@ public class SectionedExpandableGridAdapter extends RecyclerView.Adapter<Section
     //view type
     private static final int VIEW_TYPE_SECTION = R.layout.layout_expandable_section;
     private static final int VIEW_TYPE_ITEM = R.layout.layout_expandablelist_item;
+    /**
+     * 是否只显示一个Group
+     */
+    private boolean mIsShowSingleGroup;
 
     public SectionedExpandableGridAdapter(Context context, ArrayList<Object> dataArrayList,
                                           final GridLayoutManager gridLayoutManager, ExpandableListItemClickListener itemClickListener,
@@ -49,6 +53,14 @@ public class SectionedExpandableGridAdapter extends RecyclerView.Adapter<Section
                 return isSection(position)?gridLayoutManager.getSpanCount():1;
             }
         });
+    }
+
+    /**
+     * 设置是否当前只展开一个Group
+     * @param isShowSingleGroup
+     */
+    public void setShowSingleGroup(boolean isShowSingleGroup){
+        mIsShowSingleGroup = isShowSingleGroup;
     }
 
     private boolean isSection(int position) {
@@ -79,6 +91,9 @@ public class SectionedExpandableGridAdapter extends RecyclerView.Adapter<Section
                 @Override
                 public void onClick(View v) {
                     mItemClickListener.itemClicked(section);
+                    if (mIsShowSingleGroup){
+                        setExpand(section);
+                    }
                     mSectionStateChangeListener.onSectionStateChanged(section, !section.isExpanded);
                 }
             });
@@ -86,9 +101,27 @@ public class SectionedExpandableGridAdapter extends RecyclerView.Adapter<Section
             holder.sectionToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (mIsShowSingleGroup){
+                        setExpand(section);
+                    }
                     mSectionStateChangeListener.onSectionStateChanged(section, isChecked);
                 }
             });
+        }
+    }
+
+    /**
+     * 设置Section的isExpand属性
+     * @param currentSction
+     */
+    private void setExpand(Section currentSction){
+        for (int i = 0; i < mDataArrayList.size(); i++){
+            if (isSection(i)){
+                Section section = (Section) mDataArrayList.get(i);
+                if (section.id != currentSction.id){
+                    section.isExpanded = false;
+                }
+            }
         }
     }
 
